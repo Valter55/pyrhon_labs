@@ -1,1 +1,17 @@
+def findPairs(arr1, n, s):
+  
+    for i in range(0, n):
 
+        for j in range(0, n):
+
+            if (arr1[i] + arr1[j] == s):
+
+                print(arr1[i], arr1[j])
+
+arr1 = [1, 2, 3, 7, 5, 4]
+
+n = len(arr1)
+
+s = 9
+
+findPairs(arr1, n, s)
