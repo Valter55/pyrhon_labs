@@ -1,0 +1,22 @@
+from random import randint
+N = int(input("Количество столбцов "))
+M = int(input("Количество строк "))
+lst=[[randint(1, 30) for i in range(N)] for i in range(M)]
+print(lst)
+for i in lst:
+    print()
+    for j in i:
+        print (j, end=" ")
+min = lst[0][0]
+max = 0
+num_str=0# индекс строки
+for i in range(M): #цикл по всем элементам матрицы
+    for j in range(N):
+        if(lst[i][j]<min):
+            min=lst[i][j]
+        if(lst[i][j]>max and lst[i][j] % 7 == 0):
+            max=lst[i][j]
+            num_str=i
+print()
+print(max)
+print(num_str)
